@@ -1,0 +1,11 @@
+services:
+  db:
+    image: postgres
+    container_name: postgres-iot
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: iot_db
+    ports:
+      - "5432:5432"
+    restart: always
